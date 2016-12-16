@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('writeanote');
+  this.route('readanote');
+
+  this.route('posts', function() {
+    this.route('writeanote');
+    this.route('readanote');
+  });
 });
 
 export default Router;
