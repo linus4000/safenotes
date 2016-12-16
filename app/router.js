@@ -13,6 +13,14 @@ Router.map(function() {
   this.route('posts', function() {
     this.route('writeanote');
     this.route('readanote');
+
+    this.route('show', {
+      path: ':post_id'
+    });
+
+    this.route('edit', {
+      path: ':post_id/edit'
+    });
   });
 });
 
